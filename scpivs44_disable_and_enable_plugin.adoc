@@ -1,0 +1,58 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_disable_and_enable_plugin.html 
+keywords:  
+summary: Se le funzionalità di data Protection di SnapCenter non sono più necessarie, è necessario modificare la configurazione del plug-in SnapCenter per VMware vSphere. Ad esempio, se il plug-in è stato implementato in un ambiente di test, potrebbe essere necessario disattivare le funzionalità di SnapCenter in tale ambiente e attivarle in un ambiente di produzione. 
+---
+= Disattivare e attivare il plug-in SnapCenter per VMware vSphere
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Se le funzionalità di data Protection di SnapCenter non sono più necessarie, è necessario modificare la configurazione del plug-in SnapCenter per VMware vSphere. Ad esempio, se il plug-in è stato implementato in un ambiente di test, potrebbe essere necessario disattivare le funzionalità di SnapCenter in tale ambiente e attivarle in un ambiente di produzione.
+
+.Prima di iniziare
+* È necessario disporre dei privilegi di amministratore.
+* Assicurarsi che non siano in esecuzione processi SnapCenter.
+
+
+.A proposito di questa attività
+Quando si disattiva il plug-in SnapCenter per VMware vSphere, tutti i gruppi di risorse vengono sospesi e il plug-in non viene registrato come estensione in vCenter.
+
+Quando si attiva il plug-in SnapCenter per VMware vSphere, il plug-in viene registrato come estensione in vCenter, tutti i gruppi di risorse sono in modalità di produzione e tutte le pianificazioni sono abilitate.
+
+.Fasi
+. Opzionale: Eseguire il backup del plug-in SnapCenter per l'archivio MySQL di VMware vSphere nel caso si desideri ripristinarlo su una nuova appliance virtuale.
++
+link:scpivs44_back_up_the_snapcenter_plug-in_for_vmware_vsphere_mysql_database.html["Eseguire il backup del plug-in SnapCenter per il database VMware vSphere MySQL"].
+
+. Accedere alla GUI di gestione del plug-in SnapCenter per VMware vSphere utilizzando il formato `\https://<OVA-IP-address>:8080`. Accedere con il nome utente e la password dell'amministratore impostati al momento dell'implementazione e il token MFA generato dalla console di manutenzione.
++
+Quando si implementa il plug-in, viene visualizzato l'indirizzo IP del plug-in SnapCenter per VMware vSphere.
+
+. Fare clic su *Configuration* nel riquadro di navigazione a sinistra, quindi deselezionare l'opzione Service (Servizio) nella sezione *Plug-in Details* (Dettagli plug-in) per disattivare il plug-in.
+. Confermare la scelta.
++
+** Se hai utilizzato il plug-in SnapCenter per VMware vSphere solo per eseguire backup coerenti delle VM
++
+Il plug-in è disattivato e non sono necessarie ulteriori azioni.
+
+** Se hai utilizzato il plug-in SnapCenter per VMware vSphere per eseguire backup coerenti con l'applicazione
++
+Il plug-in è disattivato ed è necessaria un'ulteriore pulizia.
+
++
+... Accedere a VMware vSphere.
+... Spegnere la macchina virtuale.
+... Nella schermata di navigazione a sinistra, fare clic con il pulsante destro del mouse sull'istanza del plug-in SnapCenter per VMware vSphere (il nome del `.ova` file utilizzato al momento della distribuzione dell'appliance virtuale) e selezionare *Elimina da disco*.
+... Accedere a SnapCenter e rimuovere l'host vSphere.
+
+
+
+
+

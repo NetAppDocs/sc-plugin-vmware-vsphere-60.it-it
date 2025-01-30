@@ -1,0 +1,63 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_access_the_maintenance_console.html 
+keywords:  
+summary: 'È possibile gestire le configurazioni di applicazioni, sistemi e reti utilizzando la console di manutenzione per il plug-in SnapCenter per VMware vSphere. È possibile modificare la password dell"amministratore, la password di manutenzione, generare pacchetti di supporto e avviare la diagnostica remota.' 
+---
+= Accedere alla console di manutenzione
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile gestire le configurazioni di applicazioni, sistemi e reti utilizzando la console di manutenzione per il plug-in SnapCenter per VMware vSphere. È possibile modificare la password dell'amministratore, la password di manutenzione, generare pacchetti di supporto e avviare la diagnostica remota.
+
+.Prima di iniziare
+Prima di arrestare e riavviare il servizio plug-in SnapCenter per VMware vSphere, è necessario sospendere tutte le pianificazioni.
+
+.A proposito di questa attività
+* Nel plug-in SnapCenter per VMware vSphere 4.6P1, è necessario specificare una password al momento della prima installazione del plug-in SnapCenter per VMware vSphere. Se si esegue l'aggiornamento dalla versione 4.6 o precedente alla versione 4.6P1 o successiva, viene accettata la password predefinita precedente.
+* Durante l'attivazione della diagnostica remota, è necessario impostare una password per l'utente "DIAG".
++
+Per ottenere l'autorizzazione dell'utente root per eseguire il comando, utilizzare sudo <command>.
+
+
+
+.Fasi
+. Dal client VMware vSphere, selezionare la VM in cui si trova il plug-in SnapCenter per VMware vSphere.
+. Nella scheda *Riepilogo* dell'appliance virtuale, fare clic su *Avvia console remota* per aprire una finestra della console di manutenzione.
++
+Accedere utilizzando il nome utente e la password della console di manutenzione predefiniti `maint` impostati al momento dell'installazione.
+
++
+image:scpivs44_image11.png["Finestra della console di manutenzione"]
+
+. È possibile eseguire le seguenti operazioni:
++
+** Opzione 1: Configurazione dell'applicazione
++
+Visualizzare un riepilogo del plug-in SnapCenter per VMware vSphere avviare o arrestare il plug-in SnapCenter per il servizio VMware vSphere modificare il nome utente o la password di login per il plug-in SnapCenter per VMware vSphere modificare la password MySQL Backup e ripristino MySQL, configurare ed elencare i backup MySQL
+
+** Opzione 2: Configurazione del sistema
++
+Riavvio macchina virtuale spegnimento macchina virtuale Modifica password utente 'Maint' Modifica fuso orario Cambia server NTP attiva accesso SSH aumento dimensioni disco jail (/jail) aggiornamento Installazione VMware Tools genera token MFA
+
++
+
+NOTE: MFA è sempre attivato, non è possibile disattivare MFA.
+
+** Opzione 3: Configurazione di rete
++
+Visualizzare o modificare le impostazioni dell'indirizzo IP visualizzare o modificare le impostazioni di ricerca dei nomi di dominio visualizzare o modificare i percorsi statici commit changes Ping a host
+
+** Opzione 4: Supporto e diagnostica
++
+Genera bundle di supporto Access Diagnostic shell attiva l'accesso di diagnostica remota genera bundle di dump core
+
+
+
+

@@ -1,0 +1,48 @@
+---
+sidebar: sidebar 
+permalink: scpivs48_rest_apis_audit_logs.html 
+keywords:  
+summary: API REST per generare log di audit 
+---
+= API REST per generare log di audit
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+È possibile raccogliere i dettagli del registro di controllo dalle API REST di swagger e dall'interfaccia utente del plug-in SCV.
+
+Di seguito sono riportate le API REST di swagger:
+
+. OTTIENI 4.1/audit/log: Ottieni i dati di audit per tutti i log
+. OTTIENI 4.1/audit/logs/{filename}: Ottieni i dati di audit per un file di log specifico
+. POST 4.1/audit/verify: Attiva la verifica del log di audit.
+. GET 4.1/audit/config: Ottenere l'audit e la configurazione del server syslog
+. PUT 4.1/audit/config: Aggiorna l'audit e la configurazione del server syslog
+
+
+Per generare log di audit per i processi del client VMware vSphere utilizzando il plug-in SnapCenter per le API REST di VMware vSphere, è necessario utilizzare le chiamate API REST per VMware vSphere.
+
+Per ogni API REST, aggiungere `\https://<server>:<port>/api` alla parte anteriore dell'API REST per formare un endpoint completo.
+
+Utilizzare le seguenti API REST nella sezione lavori per ottenere informazioni dettagliate sui lavori:
+
+|===
+| API REST | Commenti 
+
+
+| `4.1/audit/logs` | restituisce i file di log di audit con i dati di integrità 
+
+
+| `4.1/audit/logs/{filename}` | ottenere un file di log di audit specifico con dati di integrità 
+
+
+| `4.1/audit/verify` | attiva la verifica dell'audit 
+
+
+| `4.1/audit/syslogcert` | aggiorna il certificato del server syslog 
+|===

@@ -1,0 +1,50 @@
+---
+sidebar: sidebar 
+permalink: scpivs44_access_rest_apis_using_the_swagger_api_web_page.html 
+keywords:  
+summary: Le API REST sono esposte attraverso la pagina web di Swagger. È possibile accedere alla pagina Web Swagger per visualizzare il server SnapCenter o il plug-in SnapCenter per le API REST di VMware vSphere, nonché per eseguire manualmente una chiamata API. Utilizza il plug-in SnapCenter per le API REST di VMware vSphere per eseguire operazioni di protezione su macchine virtuali e datastore. 
+---
+= Accedere alle API REST utilizzando la pagina Web Swagger API
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+Le API REST sono esposte attraverso la pagina web di Swagger. È possibile accedere alla pagina Web Swagger per visualizzare il server SnapCenter o il plug-in SnapCenter per le API REST di VMware vSphere, nonché per eseguire manualmente una chiamata API. Utilizza il plug-in SnapCenter per le API REST di VMware vSphere per eseguire operazioni su macchine virtuali e datastore.
+
+Il plug-in ha diverse pagine web Swagger dalle pagine web di Swagger server SnapCenter.
+
+.Prima di iniziare
+Per il plug-in SnapCenter per le API REST VMware vSphere, è necessario conoscere l'indirizzo IP o il nome host del plug-in SnapCenter per VMware vSphere.
+
+
+NOTE: Il plug-in supporta solo API REST allo scopo di integrarsi con applicazioni di terze parti e non supporta i cmdlet PowerShell o una CLI.
+
+.Fasi
+. Da un browser, immettere l'URL per accedere alla pagina Web del plug-in Swagger:
++
+`\https://<SCV_IP>:8144/api/swagger-ui/index.html`
+
++
+
+IMPORTANT: Non utilizzare i seguenti caratteri nell'URL REST API: +, . , % e &.
+
++
+.Esempio
+Accesso al plug-in SnapCenter per le API REST VMware vSphere:
+
++
+`\https://<SCV_IP>:8144/api/swagger-ui/index.html`
+
++
+`\https://OVAhost:8144/api/swagger-ui/index.html`
+
++
+Accedere utilizzare il meccanismo di autenticazione vCenter per generare il token.
+
+. Fare clic su un tipo di risorsa API per visualizzare le API in quel tipo di risorsa.
+
