@@ -336,7 +336,6 @@
   <block id="1d92d0cbfdf6166c05997268d3378fe0" category="list-text">Linked mode (modalità collegata</block>
   <block id="35f1c688325b0062756b2d7b0d00be28" category="paragraph">In modalità Linked, ogni vCenter dispone di un'appliance virtuale separata. Pertanto, è possibile utilizzare nomi duplicati nei vCenter. Tuttavia, è necessario creare il criterio nello stesso vCenter del gruppo di risorse.</block>
   <block id="9efc9e0c08da510b5195bb9dc4b1b7c2" category="list-text">Caratteri non supportati</block>
-  <block id="69a02b2d668a0ebee1d9ac100a00074c" category="paragraph">Non utilizzare i seguenti caratteri speciali in VM, datastore, cluster, policy, backup, o nomi di gruppi di risorse: % e * n. @ ! / : * ? " &lt; &gt; - | ; ' , .</block>
   <block id="a051f3eeac4a83ec1f5d55c7aeba6f06" category="paragraph">È consentito un carattere di sottolineatura (_).</block>
   <block id="6e0b19728555d1c2b7bc98ce7895aced" category="list-text">Specificare le impostazioni della frequenza.</block>
   <block id="52b19e85e6a29b6fe5690f47944f859f" category="paragraph">Il criterio specifica solo la frequenza di backup. La pianificazione di protezione specifica per il backup viene definita nel gruppo di risorse. Pertanto, due o più gruppi di risorse possono condividere la stessa policy e la stessa frequenza di backup, ma hanno diverse pianificazioni di backup.</block>
@@ -420,7 +419,6 @@
   <block id="c4436d4a190778b7ec1e9461f6454bdd" category="cell">Server vCenter</block>
   <block id="df86b612dee850ddbf3bd636d14cd09e" category="cell">Selezionare un server vCenter.</block>
   <block id="49ee3087348e8d44e1feda1917443987" category="cell">Nome</block>
-  <block id="b6f45f1c26b5dc8cfcdcf884b55437e0" category="cell">Immettere un nome per il gruppo di risorse. Non utilizzare i seguenti caratteri speciali nei nomi di macchine virtuali, datastore, policy, backup o gruppi di risorse: % &amp; * N. @ ! / : * ? " &lt; &gt; - [barra verticale] ; ' , . È consentito un carattere di sottolineatura (_). I nomi delle macchine virtuali o degli archivi dati con caratteri speciali vengono troncati, rendendo difficile la ricerca di un backup specifico. In modalità collegata, ogni vCenter dispone di un plug-in SnapCenter separato per il repository VMware vSphere. Pertanto, è possibile utilizzare nomi duplicati nei vCenter.</block>
   <block id="b1358d1843f648e7ea781a21a690cdd0" category="cell">Inserire una descrizione del gruppo di risorse.</block>
   <block id="96d008db67fc0b5551a926842bbb6a71" category="cell">Notifica</block>
   <block id="3a703c8a96e830eedbe6543218be1f6d" category="cell">Selezionare quando si desidera ricevere notifiche relative alle operazioni su questo gruppo di risorse: Errore o avvisi: Invia notifica solo per errori e avvisi errori: Invia notifica solo per errori sempre: Invia notifica per tutti i tipi di messaggi mai: Non inviare notifica</block>
@@ -996,7 +994,6 @@
   <block id="e3c333b91de412cbe4acc72a0b293a5f" category="paragraph"><block ref="e3c333b91de412cbe4acc72a0b293a5f" category="inline-image-macro-rx" type="image"></block></block>
   <block id="1d25235da54411fda3f47e1c47b94db2" category="list-text">Nella scheda Configura, selezionare un backup e fare clic su *Rinomina*.</block>
   <block id="27947ec6e4013d1b08faee7e509cae9e" category="list-text">Nella finestra di dialogo *Rename Backup*, immettere il nuovo nome e fare clic su *OK*.</block>
-  <block id="f8ffb952d62ac560c6adb8ac7e15a58e" category="paragraph">Non utilizzare i seguenti caratteri speciali nei nomi di macchine virtuali, datastore, policy, backup o gruppi di risorse: &amp; * N. @ ! / : * ? " &lt; &gt; - | ; ' , . È consentito un carattere di sottolineatura (_).</block>
   <block id="de00c1e27be1485dd099e4cd2aaa554d" category="section-title">Eliminare i backup</block>
   <block id="811a38ca6a4a37270419c2834515cf5c" category="paragraph">È possibile eliminare il plug-in di SnapCenter per i backup di VMware vSphere se non è più necessario eseguire il backup per altre operazioni di protezione dei dati. È possibile eliminare un backup o più backup contemporaneamente.</block>
   <block id="4b3cb5948249f5d59292e97ced52522d" category="paragraph">Non è possibile eliminare i backup montati. È necessario smontare un backup prima di poterlo eliminare.</block>
@@ -1046,7 +1043,6 @@
   <block id="86f5d700774abd1b4b1161e6afcd312e" category="section-title">Modificare i gruppi di risorse</block>
   <block id="1850764f60496630a671ed4a4ca36a90" category="paragraph">È possibile rimuovere o aggiungere risorse in gruppi di risorse in vCenter, scollegare o allegare policy, modificare pianificazioni o modificare qualsiasi altra opzione di gruppo di risorse.</block>
   <block id="683a572529e7ee01c3f3b2f6e84ee453" category="paragraph">Se si desidera modificare il nome di un gruppo di risorse, non utilizzare i seguenti caratteri speciali nei nomi di macchine virtuali, datastore, policy, backup o gruppi di risorse:</block>
-  <block id="bf6bb853aafb837a490acb97d9acbf87" category="paragraph">% E * N. @! / : * ? " &lt; &gt; - | ; ' , .</block>
   <block id="bc967eed1e1f8494f71a02de0d06a1ba" category="list-text">Nell'elenco a sinistra della procedura guidata *Modifica gruppo di risorse*, fare clic sulla categoria che si desidera modificare e immettere le modifiche.</block>
   <block id="e71911e6fc1645b76466cbac653dbb12" category="paragraph">È possibile apportare modifiche a più categorie.</block>
   <block id="cb0503d668bf3e03dd4da3d424936f20" category="list-text">Fare clic su *Avanti* fino a visualizzare la pagina Riepilogo, quindi fare clic su *fine*.</block>
@@ -2161,4 +2157,8 @@
   <block id="a3d53cfe9124531cb5f9bbfefe704326" category="sidebar">Flussi di lavoro delle API REST per modificare le pianificazioni integrate</block>
   <block id="3da6944b1baaec4beb70694ac307fd1f" category="sidebar">Eseguire l'aggiornamento a una nuova patch della stessa release</block>
   <block id="88464b0f22e28142bc76c51bba424a64" category="cell">Ambienti NFS: ONTAP SnapMirror Ripristina ambienti VMFS: clona e monta con Storage VMotion</block>
+  <block id="2c6c18c9ea36047e0562b8c63f8cdc3b" category="paragraph">Non utilizzare i seguenti caratteri speciali in VM, datastore, cluster, policy, backup, o nomi di gruppi di risorse: % e * n. @ ! / : * ? " &lt; &gt; - | ; ' e spazio.</block>
+  <block id="60894c2f861771ba620b772dde49422e" category="cell">Immettere un nome per il gruppo di risorse. Non utilizzare i seguenti caratteri speciali nei nomi di macchine virtuali, datastore, policy, backup o gruppi di risorse: % &amp; * N. @ ! / : * ? " &lt; &gt; - [barra verticale] ; ' , e spazio. È consentito un carattere di sottolineatura (_). I nomi delle macchine virtuali o degli archivi dati con caratteri speciali vengono troncati, rendendo difficile la ricerca di un backup specifico. In modalità collegata, ogni vCenter dispone di un plug-in SnapCenter separato per il repository VMware vSphere. Pertanto, è possibile utilizzare nomi duplicati nei vCenter.</block>
+  <block id="9d9d361ca66b8af5110eb490c5e40c1a" category="paragraph">Non utilizzare i seguenti caratteri speciali nei nomi di macchine virtuali, datastore, policy, backup o gruppi di risorse: &amp; * N. @ ! / : * ? " &lt; &gt; - | ; ' e spazio. È consentito un carattere di sottolineatura (_).</block>
+  <block id="8651a2d0c6ade87f04ae0bca90386289" category="paragraph">% E * N. @! / : * ? " &lt; &gt; - | ; ' e spazio. È consentito un carattere di sottolineatura (_).</block>
 </blocks>
